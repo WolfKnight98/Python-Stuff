@@ -8,7 +8,7 @@ print("Welcome to Dan's number guessing game!\n")
 
 # Define variables
 guesses = 0
-number = random.randint(0, 11)
+number = random.randint(0, 10)
 
 # Main program loop
 while( guesses < 3 ):
@@ -28,3 +28,4 @@ while( guesses < 3 ):
 
 if guesses == 3:
     print("You lose!")
+    print("The number was: " + str(number))
