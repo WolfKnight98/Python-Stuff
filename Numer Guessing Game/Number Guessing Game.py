@@ -3,13 +3,13 @@
 # Import modules
 import random
 
-# Intro
-print( "Welcome to Dan's number guessing game!\n" )
-
 # Define variables
 guesses = 0
 allowed_guesses = 3
 number = random.randint( 0, 10 )
+
+# Intro
+print( "Welcome to Dan's number guessing game!\n" )
 
 # Main program loop
 while( guesses < 3 ):
