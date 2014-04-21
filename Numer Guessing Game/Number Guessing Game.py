@@ -8,14 +8,18 @@ print("Welcome to Dan's number guessing game!\n")
 
 # Define variables
 guesses = 0
+allowed_guesses = 3
 number = random.randint(0, 10)
 
 # Main program loop
-while( guesses < 3 ):
-    u_guess = int(input("Have a guess: "))
+while(guesses < 3):
+    guess = input(
+        "Choose a number between 0 and 10 (%s guesses remaining): " % (allowed_guesses - guesses)
+    )
+    u_guess = int(guess)
 
     if u_guess == number:
-        print("Well done, you win!")
+        print("OMG, how did you guess, you win and are cool!")
         break
     elif u_guess > number:
         print("Your guess was too high.")
@@ -26,6 +30,6 @@ while( guesses < 3 ):
     else:
         print("There was an error.")
 
-if guesses == 3:
+if guesses == allowed_guesses:
     print("You lose!")
     print("The number was: " + str(number))
