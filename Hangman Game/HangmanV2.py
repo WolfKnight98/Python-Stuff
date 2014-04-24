@@ -1,4 +1,6 @@
-#Hangman v2 by Dan Hook
+# Hangman v2 by Dan
+# Protected under the go fuck yourself you code stealing dick license
+
 import random, os
 
 # If you're playing this game with python shell (IDLE) then leave
