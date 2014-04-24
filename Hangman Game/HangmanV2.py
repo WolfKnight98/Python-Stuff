@@ -9,20 +9,20 @@ words_list = [ "Apple", "Batman", "Device", "Steam", "Hashtag", "Map", "Snake", 
                        "Confused", "Wonderful", "Confusion", "danisthebest" ]
 
 class hangman:
-    def game_intro( self ):
+    def __init__( self ):
         print( "Welcome to Dan's second hangman game, because the first one screwed up." )
         print( "Are you ready to play? \nType 'Yes' or 'No' " )
         game_start = str( input( " >>>  " ) ).lower()
 
-        if game_start == "yes":
+        if game_start[ 0 ] == "y":
             print( "Let the game begin.." )
             self.game_start()
-        elif game_start == "no":
+        elif game_start[ 0 ] == "n":
             print( "Well fine then!" )
             exit()
         else:
             print( "I said type YES OR NO!" )
-            self.game_intro()
+            self.__init__()
         #os.system( 'cls' )
 
 
@@ -45,8 +45,8 @@ class hangman:
         #print( word )
         
         while ( guesses < 10 ):
-            print( "You've got: %s" % ( "".join( guessed_word ) ) )
-            print( "You've used: %s" % ( "".join( letters_used ) ) )
+            print( "You have guessed: %s" % ( "".join( guessed_word ) ) )
+            print( "You have used: %s" % ( "".join( letters_used ) ) )
             print( "You have %s guesses left\n" % ( allowed_guesses - guesses ) )
             
             u_guess = input( "Guess a letter: " ).lower()
@@ -73,14 +73,14 @@ class hangman:
             print( "You lose!" )
 
         restart_game = input( "Would you like to play again? ( 'Yes' or 'No' ) >>>  " ).lower()
-        if restart_game == "yes":
+        if restart_game[ 0 ] == "y":
             hangman().core_game()
-        elif restart_game == "no":
+        elif restart_game[ 0 ] == "n":
             exit()
         else:
-            print("You didn't type yes or no.")
+            print( "You didn't type yes or no." )
             
 
 # ----------------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
-    hangman().game_intro()
+    hangman()
