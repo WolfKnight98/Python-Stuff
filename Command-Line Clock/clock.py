@@ -12,7 +12,7 @@ second = 0
 # While the second variable is less than 60
 while second <= 60:
 
-    # Clear Python CMD
+    # Clear Python CMD, cls stands for 'clear screen'
     os.system( 'cls' )
 
     # Print the time with an integer format
