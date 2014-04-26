@@ -13,7 +13,7 @@ words_list = [ "Apple", "Batman", "Device", "Steam", "Hashtag", "Map", "Snake", 
 class hangman:
     def __init__( self ):
         print( "Welcome to Dan's second hangman game, because the first one screwed up." )
-        print( "Are you ready to play? \nType 'Yes' or 'No' " )
+        print( "Are you ready to play?" )
         game_start = str( input( " >>>  " ) ).lower()
 
         if game_start[ 0 ] == "y":
@@ -25,13 +25,13 @@ class hangman:
         else:
             print( "I said type YES OR NO!" )
             self.__init__()
-        #os.system( 'cls' )
+        os.system( 'cls' )
 
 
     def game_start( self ):
         print( "I assume you know what Hangman is, if you don't, please leave the rock you live under." )
         print( "The game shall start.\n" )
-        #os.system( 'cls' )
+        os.system( 'cls' )
         self.core_game()
 
 
@@ -69,13 +69,14 @@ class hangman:
                 print( "You win the game!" )
                 print( "The word was: %s" % guessed_word )
                 break
-            ##os.system( 'cls' )
+            os.system( 'cls' )
                 
         if guesses == allowed_guesses:
             print( "You lose!" )
 
-        restart_game = input( "Would you like to play again? ( 'Yes' or 'No' ) >>>  " ).lower()
+        restart_game = input( "Would you like to play again? " ).lower()
         if restart_game[ 0 ] == "y":
+            os.system( 'cls' )
             hangman().core_game()
         elif restart_game[ 0 ] == "n":
             exit()
