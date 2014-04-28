@@ -66,6 +66,7 @@ class hangman:
                     letters_used.append( u_guess )
 
             if guessed_word == word:
+                os.system( 'cls' )
                 print( "You win the game!" )
                 print( "The word was: %s" % guessed_word )
                 break
