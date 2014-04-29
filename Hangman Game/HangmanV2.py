@@ -1,5 +1,4 @@
 # Hangman v2 by Dan
-# Protected under the go fuck yourself you code stealing dick license
 
 import random, os
 
