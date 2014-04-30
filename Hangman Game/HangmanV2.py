@@ -2,9 +2,9 @@
 
 import random, os
 
-# If you're playing this game with python shell (IDLE) then leave
-# the os.system( 'cls' ) 's commented, if you're using
-# the console then uncomment them for nicer use
+# If you're playing this game with python shell (IDLE) then comment 
+# the os.system( 'cls' ) 's, if you're using
+# the console then leave them uncommented them for a cleaner console
 
 words_list = [ "Apple", "Batman", "Device", "Steam", "Hashtag", "Map", "Snake", "Letter", "Quater", "Jaguar", "Health", "Desperate",
                        "Confused", "Wonderful", "Confusion", "danisthebest" ]
