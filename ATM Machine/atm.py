@@ -49,17 +49,17 @@ class atm:
             print( "Invalid user and pincode.", "\n" )
         self.idle_close_dialog()
 
-    def idle_close_dialog(self):
+    def idle_close_dialog( self ):
         """
         When using Idle input() creates a dialog that's polite to close after it's been used.
         But this program can be used directly from the command line too, without Idle, in which,
         trying to close the dialog outputs an unecessary error.
         """
         # This basically suppresses all output from calls to os.system()
-        with open(os.devnull, "w") as fnull:
-            result = subprocess.call('cls', stdout = fnull, stderr = fnull, shell = True)
+        with open( os.devnull, "w" ) as fnull:
+            result = subprocess.call( 'cls', stdout = fnull, stderr = fnull, shell = True )
 
-    def main_menu(self):
+    def main_menu( self ):
         balance = STARTING_BALANCE
         closing = False
 
