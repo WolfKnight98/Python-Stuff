@@ -1,9 +1,8 @@
 # Atm, work in progress
 # I did make a non-class version which I'll add soon
 # Protected under the go forth and multiply you code stealing cake license
-# Uncomment time.sleeps for a nicer feel:D
 
-import random, time, os, subprocess
+import random, os, subprocess
 from atm_data import *
 
 # The convention in python is that unchaging global variables should be all capitals
@@ -11,13 +10,18 @@ STARTING_BALANCE = 0
 MAX_DEPOSIT = 500
 MAX_WITHDRAW = 1000
 
+# The ATM Class
 class atm:
 
+    # This function runs automatically when you call atm( str "Name", int pinCode )
     def __init__( self, name, pincode ):
+
+        # Declare class variables from the function
         self.name = name
         self.pincode = pincode
         user_name, user_pincode = "", None
 
+        # Ask the user to type there name
         user_name = str( input( "Type your name: " ) )
 
         if user_name != self.name:
@@ -66,13 +70,11 @@ class atm:
         while not closing:
             for line in menu:
                 print( line )
+            print( "Your balance is £%i" % ( balance ) )
 
             user_menu_choice = int( input( " >>>  " ) )
 
             if user_menu_choice == 1:
-                print( "Your balance is:", balance, "\n" )
-
-            elif user_menu_choice == 2:
                 print( "You are eligible to withdraw a maximum of %i pounds." % ( MAX_WITHDRAW ), "\n" )
 
                 try:
@@ -88,7 +90,7 @@ class atm:
                     print( "Funds deducted.", "\n" )
                     balance = balance - user_withdraw
 
-            elif user_menu_choice == 3:
+            elif user_menu_choice == 2:
                 print ( "You are eligible to deposit a maximum of %i pounds." % ( MAX_DEPOSIT ), "\n" )
 
                 try:
@@ -102,7 +104,7 @@ class atm:
                     print( "Funds added.", "\n" )
                     balance = balance + user_deposit
 
-            elif user_menu_choice == 4:
+            elif user_menu_choice == 3:
                 print( "Goodbye %s." % ( self.name ), "\n" )
                 closing = True
 
