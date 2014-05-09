@@ -106,7 +106,7 @@ class atm:
 
             elif user_menu_choice == 3:
                 print( "Goodbye %s." % ( self.name ), "\n" )
-                closing = True
+                break
 
             self.idle_close_dialog()
 
