@@ -9,7 +9,12 @@ import random, os
 words_list = [ "Apple", "Batman", "Device", "Steam", "Hashtag", "Map", "Snake", "Letter", "Quater", "Jaguar", "Health", "Desperate",
                        "Confused", "Wonderful", "Confusion", "danisthebest" ]
 
+# ===================================
+# The main hangman class for the game
+# ===================================
 class hangman:
+
+    # Define the __init__ function
     def __init__( self ):
         print( "Welcome to Dan's second hangman game, because the first one screwed up." )
         print( "Are you ready to play?" )
@@ -27,6 +32,7 @@ class hangman:
         os.system( 'cls' )
 
 
+    # Define the game_start function
     def game_start( self ):
         print( "I assume you know what Hangman is, if you don't, please leave the rock you live under." )
         print( "The game shall start.\n" )
@@ -34,6 +40,7 @@ class hangman:
         self.core_game()
 
 
+    # Define the core_game function
     def core_game( self ):
         guesses = 0
         allowed_guesses = 10
